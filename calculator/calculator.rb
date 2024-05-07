@@ -25,3 +25,13 @@ class Calculator
 		return input.inject(&:+)
 	end
 end
+
+# calculator = Calculator.new
+# result = calculator.add('1,2,3')
+# puts result # Output: 6
+# calculator.add('')         # Output: 0
+# calculator.add('1')        # Output: 1
+# calculator.add('1,5')      # Output: 6
+# calculator.add("1\n2,3")   # Output: 6
+# calculator.add("//;\n1;2") # Output: 3
+# calculator.add("-1,-2")  # Raises RuntimeError: Negative numbers not allowed: -1, -2
