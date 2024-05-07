@@ -11,5 +11,10 @@ describe Calculator do
     expect(result).to eq(1)
   end
 
+  it 'Returns the result of addition operation for given argument' do 
+    calculator = Calculator.new
+    result = calculator.add('1,1')
+    expect(result).to eq(2)
+  end
 end
 
