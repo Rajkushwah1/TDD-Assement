@@ -16,5 +16,11 @@ describe Calculator do
     result = calculator.add('1,1')
     expect(result).to eq(2)
   end
+
+  it 'returns the result and handle new lines between numbers' do 
+    calculator = Calculator.new
+    result = calculator.add("1\n2,3")
+    expect(result).to eq(6)
+  end
 end
 
