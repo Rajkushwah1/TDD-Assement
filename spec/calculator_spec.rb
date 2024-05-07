@@ -1,4 +1,5 @@
 describe Calculator do
+
   it 'returns 0 for empty string' do 
     calculator = Calculator.new
     result = calculator.add('')
@@ -23,10 +24,15 @@ describe Calculator do
     expect(result).to eq(6)
   end
 
-  it 'support different delimeter "//[delimiter]\n[numbers…]"' do 
+  it 'should support different delimeter "//[delimiter]\n[numbers…]"' do 
     calculator = Calculator.new
     result = calculator.add("//;\n1;2")
     expect(result).to eq(3)
+  end
+
+  it 'should raised an error if negative numbers is passed' do
+    calculator = Calculator.new
+    expect { calculator.add("-1,-2") }.to raise_error(RuntimeError, "Negative numbers not allowed: -1, -2")
   end
 end
 
