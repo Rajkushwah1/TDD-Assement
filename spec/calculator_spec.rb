@@ -22,5 +22,11 @@ describe Calculator do
     result = calculator.add("1\n2,3")
     expect(result).to eq(6)
   end
+
+  it 'support different delimeter "//[delimiter]\n[numbers…]"' do 
+    calculator = Calculator.new
+    result = calculator.add("//;\n1;2")
+    expect(result).to eq(3)
+  end
 end
 
