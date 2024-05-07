@@ -1,5 +1,5 @@
 describe Calculator do
-
+  
   it 'returns 0 for empty string' do 
     calculator = Calculator.new
     result = calculator.add('')
